@@ -1,0 +1,66 @@
+body{
+  font-family: verdana;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+
+  background-image: url(37946.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#name, #email{
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+::placeholder{
+  color : white;
+}
+#container{
+  width: 250px;
+  height: 230px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  backdrop-filter: blur(1px)
+}
+#sign, #continue{
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: 14px;
+  font-weight: bold;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+#sign:hover, #continue:hover{
+  background-color: gray;
+}
+#update{
+  display: none;
+  text-align: center;
+}
+#intro, #update{
+  animation: fadeIn 2s ;
+}
+#update{
+  backdrop-filter: blur(1px);
+  padding: 10px;
+  border-radius: 10px;
+}
+@keyframes fadeIn{
+  from{ opacity: 0 }
+  to{ opacity: 1 }
+}

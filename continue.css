@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: url(37946.jpg);
+  color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: verdana;
+  background-attachment: fixed;
+}
+#container{
+  width: 300px;
+  height: 200px;
+  border: 5px solid;
+  border-radius: 10px;
+  padding: 10px;
+  backdrop-filter: blur(1px);
+  animation: 5s rotate;
+}
+#container video{
+  width: 100%;
+  height: 100%;
+}
+#boss{
+  height: 50px;
+  width: 70px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border: 2px solid white;
+}
+#container p{
+  color: white;
+}
+#Movie-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 40px;
+  margin-top: 80px;
+  padding: 10px;
+  position: relative;
+}
+#test{
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  display: none;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  color: #f0f0f0;
+  animation: 2s fadeIn;
+}
+nav{
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+  border-bottom: 2px solid gray;
+}
+#test1{
+  display: flex;
+  justify-content: center;
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+#boxy h1{
+  animation: 1s jump infinite alternate;
+}
+@keyframes jump{
+  0%{
+    transform: translateZ(10px);
+  }
+  100%{
+    transform: translateY(10px);
+  }
+}
+@media(max-width: 750px){
+  #Movie-grid{
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width: 751px) and (max-width: 999px){
+  #Movie-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(min-width: 1000px){
+  #Movie-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media(max-width: 414px){
+  #Movie-grid{
+    grid-template-columns: 1fr;
+  }
+}
+@keyframes fadeIn{
+  from{opacity: 0}
+  to{opacity: 1}
+}
